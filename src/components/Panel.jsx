@@ -5,7 +5,10 @@ import { chapters } from '../config/options';
 import accessibility from '../../data/assets/accessibility.jpg';
 import buildings from '../../data/assets/buildings.png';
 import elevation from '../../data/assets/elevation.png';
+import southkafue from '../../data/assets/southkafue.png';
 import precip from '../../data/assets/precip.png';
+import floodDrought from '../../data/assets/floodDrought.png';
+import chart from '../../data/assets/chart.png';
 import evacCenters from '../../data/assets/evac_centers.png';
 import popHazard from '../../data/assets/pop_hazard.png';
 import idealCoverage from '../../data/assets/ideal_coverage.png';
@@ -55,182 +58,51 @@ export default class Panel extends React.Component {
       }
     }
   }
-
-
   render() {
     return (
       <div id="features" onScroll={this.handleScroll}>
         <section id="marikina" className="active">
-          <Typography variant="h3">Marikina City</Typography>
-          <Typography>
-            A highly urbanized city in the capital region of the Philippines, it lies in a valley surrounded by the mountains of Sierra Madre in the east and the hills of Quezon City in the west. Situated near the center of the Pasig-Marikina river basin, most of the city sits at an elevation of <span class="highlight">15 meters above sea level</span>.
+          <Typography variant="h6">Zambia NBS Project</Typography>
+          <Typography>Nature-based solutions (NBS) are interventions that work with, rather than against, nature to address societal challenges. In the case of disaster risk reduction, NBS can help to reduce the impact of natural disasters by enhancing the natural resilience of ecosystems and communities.The NBs project is currently in site selection stage for the desktop research.
+          NBs project is considering existing flood and drought risks on humans and biodiversity during the site selection stage. This approach can help to minimize the negative impacts of the project on the environment and local communities. To guide the desktop research site selection process, we will consider the following steps:
+          <ul>
+            <li>Identify areas with a history of flooding and drought: Use available data and maps to identify areas that have experienced floods and droughts in the past. </li>
+            <li>Assess the impact of flooding and drought on humans and biodiversity: Once we have identified areas with a history of flooding and drought, we will assess the impact of these events on humans and biodiversity in the area </li>
+            <li>Consider existing infrastructure and land use</li>
+            <li>Engage with local communities and stakeholders: It's important to engage with local communities and stakeholders throughout the site selection process. They can provide valuable insights into the risks and impacts of flooding and drought in the area.</li>
+          </ul>
+          Based on the evidence of flood and drought risk collected so far, the potential site for the desktop study will be in the <span class="highlight">Kafue flats and Barotse plains</span>. Kafue Flats is one of the designated RAMSA(The Ramsar Convention) sites in the Zambezi River Basin. The Kafue Flats, covering an area of <span class="highlight">6500 sq. km</span>   in Zambia, face a number of competing demands from various users. For instance, the Kafue Gorge Dam which produces about half the hydropower electricity generation for Zambia is located in Kafue Flats. In response to raising awareness of the already stressed Kafue Flats, WWF Zambia has been working to highlight some of the challenges in the Kafue Flats
           </Typography>
           <br></br>
-          <img class="figure" src={elevation} alt="Distribution of land elevations"></img>
+          <img class="figure" src={southkafue} alt="South Kafue map"></img>
           <br></br>
           <Typography variant="h6">CLIMATE &amp; ANNUAL PRECIPITATION</Typography>
           <Typography>
-            Like the rest of the country, Marikina experiences a <span class="highlight">tropical monsoon climate</span> with average temperatures from 20 &deg;C to 34 &deg;C. Although these can feel warmer because of high humidity. The dry season starts January through May, bringing around 1.5 inches of rain. For the rest of the year, Marikina experiences its wet season which pours around 5 to 17 inches of rain, with heavy downpours from August to October. Overall in a year, Marikina experiences <span class="highlight">82 inches</span> of rain on average (<i>Source: <a href="https://en.wikipedia.org/wiki/Marikina" target="_blank">Wikipedia</a></i>).
+            Zambia experiences a predominantly sub-tropical climate characterized by three distinct seasons: a hot and dry season (mid-August to mid-November), a wet rainy season (mid-November to April) and a cool dry season (May to mid-August). Rainfall is strongly influenced by the movement of the Inter-Tropical Convergence Zone (ITCZ) as well as the El Niño/Southern Oscillation (ENSO) phenomenon and varies from an annual average of <span class="highlight">600 mm</span>  in the lower south up to <span class="highlight">1300 mm</span> in the upper north of the country. Climate is tropical by location near the equator. The annual rainfall in Zambia averages between <span class="highlight">700 mm</span> in the south and <span class="highlight">1400 mm</span> in the north. The hot months are very dry, receiving almost no rainfall between May and August. The wet season (September-April) rainfall is controlled by the passage of the tropical rain belt (also known as the Inter‐Tropical Conversion Zone, ITCZ) which oscillates between the northern and southern tropics over the course of a year, bringing rain between October and April of <span class="highlight">150‐300 mm</span>  per month. Variations in the movements of the ITCZ can cause large variations in the rainfall received from one year to the next. Rainfall in Zambia is also strongly influenced by the El Niño Southern Oscillation (ENSO), which causes further inter‐annual variability. El Niño conditions (warm phase) bring drier than average conditions in the wet summer months (December-February) in the southern half of the country, whilst the north of the country simultaneously experiences significantly wetter‐than average conditions. The reverse pattern occurs with La Niña (cold phase) episodes, with dry conditions in the north and wet conditions in the south.(<i>Source: <a href="https://climateknowledgeportal.worldbank.org/country/zambia/climate-data-historical" target="_blank">worldbank</a></i>).        
           </Typography>
           <br></br>
-          <img class="figure" src={precip} alt="Average precipitation per month in Marikina"></img>
+          <img class="figure" src={chart} alt="Monthly Climatology of Zambia (1991-2020)"></img>
+          <Typography variant="h6"> FLOOD &amp; DROUGHT RISK</Typography>
+          <Typography>
+          Zambia is vulnerable to both flood and drought risks due to its location in southern Africa, where climate variability and extreme weather events are common. The country's climate is largely characterized by a wet season from November to April and a dry season from May to October. During the wet season, heavy rainfall can lead to flooding in low-lying areas, causing displacement, destruction of infrastructure, and loss of livelihoods. In recent years, Zambia has experienced several severe floods, including in 2007, 2010, 2017, 2019, and 2023. These floods have affected thousands of people and caused significant damage to infrastructure and crops. On the other hand, during the dry season, the lack of rainfall can lead to drought conditions, which can severely impact agriculture, water resources, and health. Droughts can result in crop failures, livestock deaths, and water scarcity, leading to food insecurity and malnutrition. In 2019, Zambia declared a national disaster due to a severe drought that affected over <span class="highlight">2.3 million</span>  people. Climate change is expected to exacerbate the flood and drought risks in Zambia, with projected increases in the frequency and intensity of extreme weather events. Addressing these risks will require a combination of measures, this project will conduct a desktop study to identify nature-based solutions to address these risks.    .        
+          </Typography>
+          <br></br>
+          <img class="figure" src={floodDrought} alt="Flood and Drought risk Zambia (1991-2020)"></img>
         </section>
-        <section id="land">
-          <Typography variant="h3">A River Runs through It</Typography>
-          <Typography>
-            The <span class="highlight">Marikina River</span> runs at the heart of the city, draining off rain water through its tributaries to Laguna de Bay. In its 38 kilometer stretch, its depth ranges from 3 to 21 meters, and its segments can span from 70 to 120 meters. Because it runs through to the lower stretch of the basin, the riverbanks only have elevations as high as 8 down to 2 meters above sea level.
-          </Typography>
-          <br></br>
-          <Typography variant="h6">CALL TO ACTION</Typography>
-          <Typography>
-            Acting as its lifeblood, many of Marikina's residential subdivisions, commercial buildings and critical health and education facilities have been built near the river. With continuous developments around it coupled with the constant threat of flooding, Marikina remains a focus of the national government’s efforts for flood control and disaster management (<i>Source: <a href="https://en.wikipedia.org/wiki/Marikina_River" target="_blank">Wikipedia</a></i>).
-          </Typography>
-          <br></br>
-          <img class="figure" src={buildings} alt="Distribution of buildings in Marikina"></img>
-        </section>
-        <section id="typhoon">
-          <Typography variant="h3">T.S. Ondoy</Typography>
-          <Typography>
-            Like a shield to its southeast asian neighbors, the Philippines welcomes around twenty tropical cyclones in its area of responsibility. Around ten of them become actual typhoons and make landfall, with five of those potentially bringing destructive winds and heavy rains. This makes the Philippines the most exposed to tropical storms &mdash; an unfortunate record to bear (<i>Source: <a href="https://en.wikipedia.org/wiki/Typhoons_in_the_Philippines" target="_blank">Wikipedia</a>, <a href="http://world.time.com/2013/11/11/the-philippines-is-the-most-storm-exposed-country-on-earth/" target="_blank">Time</a></i>).
-          </Typography>
-          <br></br>
-          <Typography variant="h6">EXTENT &amp; IMPACT</Typography>
-          <Typography>
-            On September 26, 2009, tropical storm “Ondoy” (typhoon “Ketsana”) made landfall and for 12 hours, flooded Metro Manila and Central Luzon. Catching everyone by surprise, it continuously dumped around 341 mm (14 in) of rain in just 6 hours and within 24 hours, a record-high 455 mm (17.9 in) of rainfall was reported. In its aftermath, around 464 people drowned and 11 billion pesos worth of infrastructure and agriculture were damaged (<i>Source: <a href="https://en.wikipedia.org/wiki/Typhoon_Ketsana" target="_blank">Wikipedia</a>, <a href="https://newsinfo.inquirer.net/818907/special-report-on-storm-ondoy-marikina-remembers-end-of-the-world" target="_blank">Inquirer</a></i>).
-          </Typography>
-          <br></br>
-          <Typography variant="h6">MARIKINA, HARDEST HIT</Typography>
-          <Typography>
-            With almost a month’s worth of rainfall that befell in less than a day, Marikina river rose to 23 meters above sea level. Considered as the worst flooding with heights that reached around 20 feet, its extent reached 14 of Marikina’s 16 <i>barangays</i> (towns). Many of its health centers were flooded, damaging their stocks of medicine and equipment. Marikina suffered 70 deaths and 27 million pesos in damages, making it one of the hardest hit cities in Metro Manila.  (<i>Source: <a href="https://newsinfo.inquirer.net/818907/special-report-on-storm-ondoy-marikina-remembers-end-of-the-world" target="_blank">Inquirer</a>, <a href="https://reliefweb.int/report/philippines/philippines-typhoon-ondoy-health-cluster-situation-report-1" target="_blank">Reliefweb</a></i>).
-          </Typography>
-        </section>
-        <section id="evacuation">
-          <Typography variant="h3">Evacuation</Typography>
-          <Typography>
-            Completely unaware, many families in low lying areas were stranded in their upper floors while others climbed to their roofs. In Marikina, around 14 to 23 available schools and evacuation centers took people in, as well as some churches. While many scrambled to these locations as it rained, there were anecdotal reports that some of these experienced flooding as well. As we prepare for more typhoons and monsoon rains like those brought by Ondoy, <span class="highlight">how suitable are the current evacuation centers and their locations in sheltering Marikina’s citizens from peril?</span>
-          </Typography>
-          <br></br>
-          <Typography>
-            First, let’s look at what the current evacuation centers are like. Like most cities in the Philippines, Marikina converts its elementary schools, high schools and covered basketball courts into temporary shelters during typhoons. 
-          </Typography>
-          <br></br>
-          <img class="figure" src={evacCenters} alt="Distribution of buildings in Marikina"></img>
-          <br></br>
-          <Typography>
-            While these buildings might seem practical for a few days of stay, there are always concerns whether there is <span class="highlight">enough space and provisions for privacy, proper sanitation and healthcare</span>. This is especially true for evacuees who cannot easily return to their homes and would require further recovery assistance.
-          </Typography>
-          <br></br>
-          <Typography variant="h6">HAZARD EXPOSURE</Typography>
-          <Typography>
-            Twelve evacuation centers are located in medium to high hazard areas for a 5-year flood return period, almost a third of their number. This jumps to 21 evacuation centers for a 100-year return period, fifteen of which are schools. While many of these schools are multi-storey buildings with at least 3-4 floors, evacuees in these shelters can still get stranded and make them unable to access other critical facilities nearby.
-          </Typography>
-        </section>
-        <section id="population">
-          <Typography variant="h3">Population</Typography>
-          <Typography>
-            Marikina City has 450,741 citizens. <span class="highlight">How many of them are exposed to flooding hazard?</span>
-          </Typography>
-          <br></br>
-          <img class="figure" src={popHazard} alt="Distribution of exposed population per return period"></img>
-          <br></br>
-          <Typography>
-            If we look at the flood hazard for a 5-year return period, around <span class="highlight">47% of the population are exposed to high and medium hazards</span>, which is already a sizeable number of people. This percentage jumps to <span class="highlight">65%</span> and <span class="highlight">69%</span> of the population for the 25- and 100-year return periods, respectively.
-          </Typography>
-          <br></br>
-          <Typography>
-            <span class="highlight">Can these people easily go to a nearby evacuation center?</span> And if they can, <span class="highlight">will there be enough space and other provisions?</span>
-          </Typography>
-        </section>
-        <section id="coverage">
-          <Typography variant="h3">Ideal Coverage</Typography>
-          <Typography>
-            If we draw <span class="highlight">400 m</span> circles around each evacuation center, the map shows how many people can reach them within an acceptable walking distance. What do these mean? We can consider these as the <span class="highlight">ideal number of people that each evacuation center should be able to shelter</span> in times of disaster. Currently, <span class="highlight">86%</span> of the population are in close proximity to at least one evacuation center.
-          </Typography>
-          <br></br>
-          <img class="figure" src={idealCoverage} alt="Population covered within 400 meters"></img>
-          <br></br>
-          <Typography>
-            There are also many evacuation centers that <span class="highlight">overlap ideal coverage</span>, which can be a good thing for citizens. There are around <span class="highlight">35%</span> of the population with at least two evacuation centers nearby, and <span class="highlight">3% of them are near to four shelters</span>. And if we look at the map, these clusters of evacuation centers are nicely located in relatively population dense areas, suggesting good coverage and availability of options.
-          </Typography>
-        </section>
-        <section id="capacity">
-          <Typography variant="h3">Estimated Capacity</Typography>
-          <Typography>
-            Now that we know the ideal number of people that each evacuation center should serve, <span class="highlight">how many can they actually fit?</span> We got the total floor areas and computed for the estimated number of people that can comfortably stay in these shelters (<span class="highlight">5 sqm of space per person</span>). All locations had an estimated capacity <span class="highlight">way below their ideal coverage</span>, which means there won’t be enough space if everyone within close proximity have to evacuate. On average, there is a sizeable difference of around <span class="highlight">10,416 people</span> that will be underserved per evacuation center.
-          </Typography>
-          <br></br>
-          <img class="figure" src={sampaguita} alt="Sampaguita Gym in Marikina"></img>
-          <br></br>
-          <Typography>
-            To illustrate some of these differences, here is <span class="highlight">Sampaguita Gym</span> with an estimated capacity of only <span class="highlight">123 people</span> evacuating and staying comfortably within its vicinity. However, because of the dense population within close proximity, it needs to serve <span class="highlight">168 times more people</span>. While Malanday National HS, Malanday Elementary School and Filipinas Gym are other nearby options, they too are well below their capacities, with <span class="highlight">Filipinas Gym</span> expected to shelter <span class="highlight">127 times more</span>. <i>(Photo credit: Google Streetview)</i>
-          </Typography>
-        </section>
-        <section id="accessibility">
-          <Typography variant="h3">Accessibility</Typography>
-          <Typography>
-            We also looked into the accessibility of the evacuation centers by generating isochrones that represent <span class="highlight">areas that can be reached from 5 to 30 minutes</span>. It can be seen from the map that all evacuation centers can already be reached by the majority of the population in <span class="highlight">15 minutes</span>, which is beneficial for urgent evacuations at the onset of a heavy downpour. However, these isochrones cannot account for the effects of flooding on one’s walking speed if evacuations will happen during a deluge.
-          </Typography>
-          <br></br>
-          <img class="figure" src={accessibility} alt="People walking on flooded roads"></img>
-          <br></br>
-          <i>(Photo credit: <a class="fig-caption" href="http://archive.boston.com/bigpicture/2009/09/typhoon_ketsana_ondoy.html" target="_blank">boston.com</a>)</i>
-        </section>
-        <section id="suitability">
-          <Typography variant="h3">Suitability</Typography>
-          <Typography>
-            By considering the various factors such as <span class="highlight">flood hazard level, land elevation, land cover, accessibility to road networks and the maximum population coverage of an evacuation center</span>, we derived a suitability score for each area. The suitability score gives us an idea of how ideal a certain area is for an evacuation center to be built to be able to minimize the risks.
-          </Typography>
-          <br></br>
-          <Typography>
-            The basis of the suitability score varied depending on the flood hazard level to be able to factor in cases of high-rising flood and low-rising flood. If we look at the suitability map for a 5-year return period, <span class="highlight">over 52% of the city has low to very low suitability</span>. The percentage increases to approximately <span class="highlight">64%</span> and <span class="highlight">69%</span> for the 25- and 100-year return periods respectively.
-          </Typography>
-          <br></br>
-          <Typography>
-            Out of the 28 evacuation centers, <span class="highlight">only 3 evacuation centers</span> will be in very high suitability areas up until the 100-year return period. There are 13 which would stay in high suitability areas, but the remaining 12 will be in low suitability areas by the 100-year return period.
-          </Typography>
-        </section>
-        <section id="good-place">
-          <Typography variant="h3">The Good Places</Typography>
-          <Typography>
-            Despite a large area of Marikina considered to have low suitability for flood evacuation centers, there are some large <span class="highlight">very high suitable areas</span> that we can notice. The largest area is found in the neighborhood of <span class="highlight">Marikina Heights</span> at the eastern side of the city. This area is composed of mountains and numerous narrow alleys which act as <span class="highlight">catch basins</span> during the floods. In the recent flooding due to Typhoon Karding, this area reported no flooding possibly due to its <span class="highlight">topographical characteristics</span> and <span class="highlight">developed facilities</span> like drainage and pumping stations to accommodate the <span class="highlight">high population</span>.
-          </Typography>
-          <br></br>
-          <Typography>
-            The second largest very high suitable area is found at the western side of the Marikina River with <span class="highlight">Ateneo De Manila University</span> as a neighbor on the west. The university area is <span class="highlight">almost entirely covered in grass with some scattered trees</span>. Compared to other areas <span class="highlight">right beside the river</span>, this area has a <span class="highlight">higher elevation</span> and experiences <span class="highlight">very little flooding</span>.
-          </Typography>
-          <br></br>
-          <Typography>
-            On the other side of the Marikina River, another very high suitable area can be observed and it is <span class="highlight">relatively closer to the river</span> compared to the previous area mentioned. Aside from its relatively <span class="highlight">large concentration of people</span>, the high suitability score could be attributed to <span class="highlight">numerous passable roads</span> and spots of <span class="highlight">greenery</span> contributed by golf lots, sports complexes and other leisure accommodations within the vicinity.
-          </Typography>
-        </section>
+
+
         <section id="conclusion">
-          <Typography variant="h3">Moving Forward</Typography>
+
+          <Typography variant="h6">Project Partners </Typography>
           <Typography>
-            In this analysis of Marikina's evacuation centers, we have illustrated how unsuitable many of them are in terms of their <span class="highlight">medium to high exposure to flooding</span> and <span class="highlight">incapacity to serve nearby residents</span>. We then tried to look into the suitability of other areas, hoping to find <span class="highlight">viable locations for new evacuation centers</span>. We found Marikina Heights as the most viable location for evacuation centers. But anything built there cannot serve other densely populated areas. 
+            <ul>
+              <li>The Netherlands Red Cross</li>
+              <li>WWF Netherlands</li>
+              <li>WWF Zambia</li>
+              <li>Zambia Red Cross Society </li>
+            </ul>
           </Typography>
-          <br></br>
-          <Typography>
-            What about other suitable locations that are already built up land? There is always the option of finding existing buildings other than schools and covered courts that can also serve as shelters. However, we highly suggest that Marikina explore <span class="highlight">developing multipurpose buildings</span> like those built in Singapore to account for the lack of space in many residential areas. 
-          </Typography>
-          <br></br>
-          <Typography> 
-            While Marikina can be lauded in the herculean task of effectively instituting information campaigns and building flood control infrastructures, it is also important that they look into critical infrastructures that are heavily utilized at the onset, during and soon after a typhoon or flooding. Although these are temporary relief, evacuees' experiences in these shelters will definitely set the tone for their successful return and recovery.
-          </Typography>
-          <br></br>
-          <Typography variant="h6">WINNINGS</Typography>
-          <Typography>
-            This interactive "scrollytelling" won <span class="highlight">GRAND PRIZE</span>🏆 and the <span class="highlight">Best Interaction Design</span>🎖 award for the <span class="highlight">#VizRisk Challenge</span>! Read the announcement of winners from the <a href="https://blogs.worldbank.org/opendata/visualizing-risk-announcing-winners-vizrisk-2019-challenge" target="_blank">World Bank Group</a>.
-          </Typography>
-          <br></br>
-          <Typography variant="h6">THE TEAM</Typography>
-          <Typography>
-            This is the proud work of <span class="highlight">Briane Paul V. Samson</span> from <a href="https://www.fun.ac.jp/en/" target="_blank">Future University Hakodate</a> &amp; <a href="https://www.dlsu.edu.ph/" target="_blank">De La Salle University</a> and <span class="highlight">Unisse C. Chua</span> from <a href="https://www.dlsu.edu.ph/" target="_blank">De La Salle University</a>. They are both from the <a href="https://comet.dlsu.edu.ph" target="_blank">Center for Complexity and Emerging Technologies</a> in De La Salle University, Philippines. This wouldn't be possible without the help of Winfred Villaluna, Darlene Marpa, Tyler Venzon and Benson Polican in collecting and processing parts of the data.
-          </Typography>
-          <br></br>
-          <Typography variant="h6">CODE</Typography>
-          <Typography>
-            If you are interested in replicating our work, you can clone our  <a href="https://github.com/dlsucomet/riesgo-vis" target="_blank">GitHub repository</a>. 
-          </Typography>
+
         </section>
       </div>
     );

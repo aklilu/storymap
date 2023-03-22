@@ -15,9 +15,9 @@ export default class Map extends React.Component {
     super(props);
 
     this.state = {
-      lat: 14.639452415446272,
-      lng: 121.10270229817115,
-      zoom: 12.7,
+      lat: -15.768839,//14.639452415446272,
+      lng: 28.14493,//121.10270229817115,
+      zoom: 10,
     };
   }
 
@@ -34,7 +34,7 @@ export default class Map extends React.Component {
       style: 'mapbox://styles/brianehenyo/cjxkcz3mw46z81crr7sbh3bpz',
       center: [lng, lat],
       zoom,
-      minZoom: 12,
+      minZoom: 6,
       maxZoom: 15,
       pitch: 60,
       bearing: 0.13,
