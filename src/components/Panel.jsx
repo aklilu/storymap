@@ -62,7 +62,7 @@ export default class Panel extends React.Component {
     return (
       <div id="features" onScroll={this.handleScroll}>
         <section id="marikina" className="active">
-          <Typography variant="h6">Zambia NBS Project</Typography>
+          <Typography variant="h4">Zambia NBS Project</Typography>
           <Typography>Nature-based solutions (NBS) are interventions that work with, rather than against, nature to address societal challenges. In the case of disaster risk reduction, NBS can help to reduce the impact of natural disasters by enhancing the natural resilience of ecosystems and communities.The NBs project is currently in site selection stage for the desktop research.
           NBs project is considering existing flood and drought risks on humans and biodiversity during the site selection stage. This approach can help to minimize the negative impacts of the project on the environment and local communities. To guide the desktop research site selection process, we will consider the following steps:
           <ul>
@@ -73,23 +73,18 @@ export default class Panel extends React.Component {
           </ul>
           Based on the evidence of flood and drought risk collected so far, the potential site for the desktop study will be in the <span class="highlight">Kafue flats and Barotse plains</span>. Kafue Flats is one of the designated RAMSA(The Ramsar Convention) sites in the Zambezi River Basin. The Kafue Flats, covering an area of <span class="highlight">6500 sq. km</span>   in Zambia, face a number of competing demands from various users. For instance, the Kafue Gorge Dam which produces about half the hydropower electricity generation for Zambia is located in Kafue Flats. In response to raising awareness of the already stressed Kafue Flats, WWF Zambia has been working to highlight some of the challenges in the Kafue Flats
           </Typography>
-          <br></br>
-          <img class="figure" src={southkafue} alt="South Kafue map"></img>
-          <br></br>
           <Typography variant="h6">CLIMATE &amp; ANNUAL PRECIPITATION</Typography>
           <Typography>
             Zambia experiences a predominantly sub-tropical climate characterized by three distinct seasons: a hot and dry season (mid-August to mid-November), a wet rainy season (mid-November to April) and a cool dry season (May to mid-August). Rainfall is strongly influenced by the movement of the Inter-Tropical Convergence Zone (ITCZ) as well as the El Niño/Southern Oscillation (ENSO) phenomenon and varies from an annual average of <span class="highlight">600 mm</span>  in the lower south up to <span class="highlight">1300 mm</span> in the upper north of the country. Climate is tropical by location near the equator. The annual rainfall in Zambia averages between <span class="highlight">700 mm</span> in the south and <span class="highlight">1400 mm</span> in the north. The hot months are very dry, receiving almost no rainfall between May and August. The wet season (September-April) rainfall is controlled by the passage of the tropical rain belt (also known as the Inter‐Tropical Conversion Zone, ITCZ) which oscillates between the northern and southern tropics over the course of a year, bringing rain between October and April of <span class="highlight">150‐300 mm</span>  per month. Variations in the movements of the ITCZ can cause large variations in the rainfall received from one year to the next. Rainfall in Zambia is also strongly influenced by the El Niño Southern Oscillation (ENSO), which causes further inter‐annual variability. El Niño conditions (warm phase) bring drier than average conditions in the wet summer months (December-February) in the southern half of the country, whilst the north of the country simultaneously experiences significantly wetter‐than average conditions. The reverse pattern occurs with La Niña (cold phase) episodes, with dry conditions in the north and wet conditions in the south.(<i>Source: <a href="https://climateknowledgeportal.worldbank.org/country/zambia/climate-data-historical" target="_blank">worldbank</a></i>).        
           </Typography>
           <br></br>
           <img class="figure" src={chart} alt="Monthly Climatology of Zambia (1991-2020)"></img>
+          <br></br>
           <Typography variant="h6"> FLOOD &amp; DROUGHT RISK</Typography>
           <Typography>
           Zambia is vulnerable to both flood and drought risks due to its location in southern Africa, where climate variability and extreme weather events are common. The country's climate is largely characterized by a wet season from November to April and a dry season from May to October. During the wet season, heavy rainfall can lead to flooding in low-lying areas, causing displacement, destruction of infrastructure, and loss of livelihoods. In recent years, Zambia has experienced several severe floods, including in 2007, 2010, 2017, 2019, and 2023. These floods have affected thousands of people and caused significant damage to infrastructure and crops. On the other hand, during the dry season, the lack of rainfall can lead to drought conditions, which can severely impact agriculture, water resources, and health. Droughts can result in crop failures, livestock deaths, and water scarcity, leading to food insecurity and malnutrition. In 2019, Zambia declared a national disaster due to a severe drought that affected over <span class="highlight">2.3 million</span>  people. Climate change is expected to exacerbate the flood and drought risks in Zambia, with projected increases in the frequency and intensity of extreme weather events. Addressing these risks will require a combination of measures, this project will conduct a desktop study to identify nature-based solutions to address these risks.    .        
           </Typography>
-          <br></br>
-          <img class="figure" src={floodDrought} alt="Flood and Drought risk Zambia (1991-2020)"></img>
-        </section>
-
+         </section>
 
         <section id="conclusion">
 
