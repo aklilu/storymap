@@ -8,16 +8,16 @@ import {
   chapters, floodStops, suitabilityStops, isoStops, tooltipConfig,
 } from '../config/options';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpYW5laGVueW8iLCJhIjoiY2pndWV6dThmMTJlYTJxcTl5aDBoNTg5aSJ9.4qHmp0Q31Yuntdp6Ee_x-A';
+mapboxgl.accessToken = 'pk.eyJ1IjoiNTEwZ2xvYmFsIiwiYSI6ImNrZmkwYXBoNjA3amsyem9kdDN2ZzBkdmIifQ.AgtfMe5wlex1RVjfUNQxdg';
 
 export default class Map extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      lat: -15.768839,//14.639452415446272,
-      lng: 28.14493,//121.10270229817115,
-      zoom: 10,
+      lat: -15.488839,//14.639452415446272,
+      lng: 27.14493,//121.10270229817115,
+      zoom: 5,
     };
   }
 
@@ -31,21 +31,32 @@ export default class Map extends React.Component {
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/brianehenyo/cjxkcz3mw46z81crr7sbh3bpz',
+      style: 'mapbox://styles/510global/clfl4ijaz000f01o5yhs0l9z6',
       center: [lng, lat],
       zoom,
-      minZoom: 6,
+      minZoom: 1,
       maxZoom: 15,
-      pitch: 60,
-      bearing: 0.13,
+      pitch: 0,
+      bearing: 0,
     });
 
     this.map.addControl(new mapboxgl.NavigationControl(), 'top-right');
-
     this.map.on('style.load', () => {
       this.map.addSource('riesgo', {
         type: 'vector',
         url: 'mapbox://unissechua.8kcfu1fc',
+      });     
+      this.map.addSource('riskmap', {
+        type: 'geojson',
+        data: 'data/ZMB_historical_disaster.geojson',
+      });
+      this.map.addSource('studyarea', {
+        type: 'geojson',
+        data: 'data/areas.geojson',
+      });
+      this.map.addSource('basins', {
+        type: 'geojson',
+        data: 'data/basins.geojson',
       });
 
       this.map.addSource('evacuation', {
@@ -87,6 +98,31 @@ export default class Map extends React.Component {
         type: 'geojson',
         data: 'data/areas_of_interest.geojson',
       });
+
+      this.map.addLayer({
+        id: 'studyarea',
+        type: 'fill',
+        source: 'studyarea',
+        'source-layer': 'areas',
+        paint: {
+          'fill-color': '#38316e',    
+          'fill-opacity': 0,     
+          'fill-outline-color': '#38316e',
+        },
+      }, 'waterway');
+
+      this.map.addLayer({
+        id: 'basins',
+        type: 'fill',
+        source: 'basins',
+        'source-layer': 'basin',
+        paint: {
+          'fill-color': '#1b9e77',    
+          'fill-opacity': 0,     
+          'fill-outline-color': '#1b9e77',
+        },
+      }, 'waterway'); 
+
 
       this.map.addLayer({
         id: 'boundary',

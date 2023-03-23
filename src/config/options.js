@@ -1,139 +1,98 @@
-const center = [121.10270229817115, 14.639452415446272];
-const pitch = 60;
-const bearing = 0.13;
-const zoom = 12.5;
-
+const center = [27.1413635, -15.484146];
+const pitch = 0;
+const bearing = 0;
+const zoom = 7.8;
+const maxZoom = 15;
+ 
 const chapters = {
-  marikina: {
+  climate_current: {
     paint: [
       {
-        id: 'boundary',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation3d',
-        opacity: 0.5,
-      },
-      {
-        id: 'buildings',
-        opacity: 0,
-      },
-      {
-        id: 'flood',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation',
-        opacity: 0,
-      },
-      {
-        id: 'population',
-        opacity: 0,
-      },
-      {
-        id: 'radius',
-        opacity: 0,
-      },
-      {
-        id: 'capacity',
-        opacity: 0,
-      },
-      {
-        id: 'walking',
-        opacity: 0,
-      },
-      {
-        id: 'suitability',
-        opacity: 0,
-      },
-      {
-        id: 'aoe',
-        opacity: 0,
-      },
-    ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'visible',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'none',
-      },
-    ],
-    position: {
-      pitch,
-      bearing,
-      zoom: 12.7,
-      center,
-      duration: 800,
-    },
-  },
-  land: {
-    paint: [
-      {
-        id: 'boundary',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation3d',
-        opacity: 0,
-      },
-      {
-        id: 'buildings',
+        id: 'BDI_climate_cdd',
         opacity: 1,
       },
       {
-        id: 'flood',
+        id: 'BDI_climate_prcptot',
         opacity: 0,
       },
       {
-        id: 'landelevation',
-        opacity: 0.5,
-      },
-      {
-        id: 'population',
+        id: 'BDI_climate_rx5',
         opacity: 0,
       },
       {
-        id: 'radius',
+        id: 'BDI_climate_txx',
         opacity: 0,
       },
       {
-        id: 'capacity',
+        id: 'BDI_climate_cdd_proj',
         opacity: 0,
       },
       {
-        id: 'walking',
+        id: 'BDI_climate_prcptot_proj',
         opacity: 0,
       },
       {
-        id: 'suitability',
+        id: 'BDI_climate_rx5_proj',
         opacity: 0,
       },
       {
-        id: 'aoe',
+        id: 'BDI_climate_txx_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_heat',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_point',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_migration',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_UCDP_pol',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
         opacity: 0,
       },
     ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'none',
-      },
-    ],
+    layout: [],
     position: {
       pitch: 0,
       bearing: 0,
@@ -142,67 +101,94 @@ const chapters = {
       duration: 800,
     },
   },
-  typhoon: {
+  hotspots: {
     paint: [
       {
-        id: 'boundary',
+        id: 'BDI_climate_cdd',
         opacity: 0,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_climate_prcptot',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_climate_rx5',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
         opacity: 1,
       },
       {
-        id: 'flood',
-        opacity: 0.6,
-      },
-      {
-        id: 'landelevation',
+        id: 'BDI_climate_cdd_proj',
         opacity: 0,
       },
       {
-        id: 'population',
+        id: 'BDI_climate_prcptot_proj',
         opacity: 0,
       },
       {
-        id: 'radius',
+        id: 'BDI_climate_rx5_proj',
         opacity: 0,
       },
       {
-        id: 'capacity',
+        id: 'BDI_climate_txx_proj',
         opacity: 0,
       },
       {
-        id: 'walking',
+        id: 'BDI_historical_disasters_heat',
         opacity: 0,
       },
       {
-        id: 'suitability',
+        id: 'BDI_historical_disasters_point',
         opacity: 0,
       },
       {
-        id: 'aoe',
+        id: 'BDI_migration',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_UCDP_pol',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
         opacity: 0,
       },
     ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'none',
-      },
-    ],
+    layout: [],
     position: {
       // center: [121.0974737857415, 14.651397521228759],
       // zoom: 14.5,
@@ -213,201 +199,94 @@ const chapters = {
       duration: 800,
     },
   },
-  evacuation: {
+  climate_projections: {
     paint: [
       {
-        id: 'boundary',
+        id: 'BDI_climate_cdd',
         opacity: 0,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_climate_prcptot',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_climate_rx5',
         opacity: 0,
       },
       {
-        id: 'flood',
-        opacity: 0.6,
-      },
-      {
-        id: 'landelevation',
+        id: 'BDI_climate_txx',
         opacity: 0,
       },
       {
-        id: 'population',
-        opacity: 0,
-      },
-      {
-        id: 'radius',
-        opacity: 0,
-      },
-      {
-        id: 'capacity',
-        opacity: 0,
-      },
-      {
-        id: 'walking',
-        opacity: 0,
-      },
-      {
-        id: 'aoe',
-        opacity: 0,
-      },
-    ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'visible',
-      },
-    ],
-    position: {
-      pitch: 0,
-      bearing: 0,
-      zoom,
-      center,
-      duration: 800,
-    },
-  },
-  population: {
-    paint: [
-      {
-        id: 'boundary',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation3d',
-        opacity: 0,
-      },
-      {
-        id: 'buildings',
-        opacity: 0,
-      },
-      {
-        id: 'flood',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation',
-        opacity: 0,
-      },
-      {
-        id: 'population',
-        opacity: 0.9,
-      },
-      {
-        id: 'radius',
-        opacity: 0,
-      },
-      {
-        id: 'capacity',
-        opacity: 0,
-      },
-      {
-        id: 'walking',
-        opacity: 0,
-      },
-      {
-        id: 'suitability',
-        opacity: 0,
-      },
-      {
-        id: 'aoe',
-        opacity: 0,
-      },
-    ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'none',
-      },
-    ],
-    position: {
-      pitch: 0,
-      bearing: 0,
-      zoom,
-      center,
-      duration: 800,
-    },
-  },
-  coverage: {
-    paint: [
-      {
-        id: 'boundary',
+        id: 'BDI_climate_cdd_proj',
         opacity: 1,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_climate_prcptot_proj',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_climate_rx5_proj',
         opacity: 0,
       },
       {
-        id: 'flood',
+        id: 'BDI_climate_txx_proj',
         opacity: 0,
       },
       {
-        id: 'landelevation',
+        id: 'BDI_historical_disasters_heat',
         opacity: 0,
       },
       {
-        id: 'population',
+        id: 'BDI_historical_disasters_point',
         opacity: 0,
       },
       {
-        id: 'radius',
-        opacity: 0.7,
-      },
-      {
-        id: 'capacity',
+        id: 'BDI_migration',
         opacity: 0,
       },
       {
-        id: 'walking',
+        id: 'BDI_conflict_UCDP_pol',
         opacity: 0,
       },
       {
-        id: 'suitability',
+        id: 'BDI_conflict_trends',
         opacity: 0,
       },
       {
-        id: 'aoe',
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
         opacity: 0,
       },
     ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'visible',
-      },
-    ],
+    layout: [],
     position: {
       pitch: 0,
       bearing: 0,
@@ -416,845 +295,2113 @@ const chapters = {
       duration: 800,
     },
   },
-  capacity: {
+  disasters: {
     paint: [
       {
-        id: 'boundary',
+        id: 'BDI_climate_cdd',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_cdd_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_heat',
+        opacity:
+        {
+        stops: [
+          [8.5, 1],
+          [9, 0]
+        ]
+      },
+      },
+      {
+        id: 'BDI_historical_disasters_point',
+        opacity:
+        {
+          stops: [
+            [8.5, 0],
+            [9, 1]
+          ]
+        },
+      },
+      {
+        id: 'BDI_migration',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_UCDP_pol',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
+        opacity: 0,
+      },
+    ],
+    layout: [],
+    position: {
+      pitch,
+      bearing,
+      zoom: 7.8,
+      center,
+      duration: 800,
+    },
+  },
+  migration: {
+    paint: [
+      {
+        id: 'BDI_climate_cdd',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_cdd_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_heat',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_point',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_migration',
         opacity: 1,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_conflict_UCDP_pol',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_conflict_trends',
         opacity: 0,
       },
       {
-        id: 'flood',
+        id: 'BDI_inform_lack',
         opacity: 0,
       },
       {
-        id: 'landelevation',
+        id: 'BDI_inform_vuln',
         opacity: 0,
       },
       {
-        id: 'population',
+        id: 'BDI_inform_he',
         opacity: 0,
       },
       {
-        id: 'radius',
-        opacity: 0,
-      },
-      {
-        id: 'capacity',
-        opacity: 0.5,
-      },
-      {
-        id: 'walking',
-        opacity: 0,
-      },
-      {
-        id: 'suitability',
-        opacity: 0,
-      },
-      {
-        id: 'aoe',
+        id: 'BDI_inform_risk',
         opacity: 0,
       },
     ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'visible',
-      },
-    ],
+    layout: [],
     position: {
       pitch: 0,
       bearing: 0,
-      zoom,
+      maxZoom: 11,
       center,
       duration: 800,
     },
   },
-  accessibility: {
+  conflict: {
     paint: [
       {
-        id: 'boundary',
+        id: 'BDI_climate_cdd',
         opacity: 0,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_climate_prcptot',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_climate_rx5',
         opacity: 0,
       },
       {
-        id: 'flood',
+        id: 'BDI_climate_txx',
         opacity: 0,
       },
       {
-        id: 'population',
-        opacity: 0.1,
-      },
-      {
-        id: 'landelevation',
+        id: 'BDI_climate_cdd_proj',
         opacity: 0,
       },
       {
-        id: 'radius',
+        id: 'BDI_climate_prcptot_proj',
         opacity: 0,
       },
       {
-        id: 'capacity',
+        id: 'BDI_climate_rx5_proj',
         opacity: 0,
       },
       {
-        id: 'walking',
-        opacity: 0.7,
-      },
-      {
-        id: 'suitability',
+        id: 'BDI_climate_txx_proj',
         opacity: 0,
       },
       {
-        id: 'aoe',
-        opacity: 0,
-      },
-    ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'visible',
-      },
-    ],
-    position: {
-      pitch: 0,
-      bearing: 0,
-      zoom,
-      center,
-      duration: 800,
-    },
-  },
-  suitability: {
-    paint: [
-      {
-        id: 'boundary',
+        id: 'BDI_historical_disasters_heat',
         opacity: 0,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_historical_disasters_point',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_migration',
         opacity: 0,
       },
       {
-        id: 'flood',
-        opacity: 0,
-      },
-      {
-        id: 'population',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation',
-        opacity: 0,
-      },
-      {
-        id: 'radius',
-        opacity: 0,
-      },
-      {
-        id: 'capcity',
-        opacity: 0,
-      },
-      {
-        id: 'walking',
-        opacity: 0,
-      },
-      {
-        id: 'suitability',
-        opacity: 0.7,
-      },
-      {
-        id: 'aoe',
-        opacity: 0,
-      },
-    ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'none',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'visible',
-      },
-    ],
-    position: {
-      pitch: 0,
-      bearing: 0,
-      zoom,
-      center,
-      duration: 800,
-    },
-  },
-  'good-place': {
-    paint: [
-      {
-        id: 'boundary',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation3d',
-        opacity: 0,
-      },
-      {
-        id: 'buildings',
-        opacity: 0,
-      },
-      {
-        id: 'flood',
-        opacity: 0,
-      },
-      {
-        id: 'population',
-        opacity: 0,
-      },
-      {
-        id: 'landelevation',
-        opacity: 0,
-      },
-      {
-        id: 'radius',
-        opacity: 0,
-      },
-      {
-        id: 'capcity',
-        opacity: 0,
-      },
-      {
-        id: 'walking',
-        opacity: 0,
-      },
-      {
-        id: 'suitability',
-        opacity: 0.7,
-      },
-      {
-        id: 'aoe',
+        id: 'BDI_conflict_UCDP_pol',
         opacity: 1,
       },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
+        opacity: 0,
+      },
     ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'visible',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'none',
-      },
-    ],
+    layout: [],
     position: {
-      pitch: 0,
-      bearing: 0,
-      zoom,
+      // center: [121.0974737857415, 14.651397521228759],
+      // zoom: 14.5,
       center,
+      zoom,
+      bearing: 0,
+      pitch: 0,
       duration: 800,
     },
   },
-  conclusion: {
+  vulnerability: {
     paint: [
       {
-        id: 'boundary',
+        id: 'BDI_climate_cdd',
         opacity: 0,
       },
       {
-        id: 'landelevation3d',
+        id: 'BDI_climate_prcptot',
         opacity: 0,
       },
       {
-        id: 'buildings',
+        id: 'BDI_climate_rx5',
         opacity: 0,
       },
       {
-        id: 'flood',
+        id: 'BDI_climate_txx',
         opacity: 0,
       },
       {
-        id: 'population',
+        id: 'BDI_climate_cdd_proj',
         opacity: 0,
       },
       {
-        id: 'landelevation',
+        id: 'BDI_climate_prcptot_proj',
         opacity: 0,
       },
       {
-        id: 'radius',
+        id: 'BDI_climate_rx5_proj',
         opacity: 0,
       },
       {
-        id: 'capcity',
+        id: 'BDI_climate_txx_proj',
         opacity: 0,
       },
       {
-        id: 'walking',
+        id: 'BDI_historical_disasters_heat',
         opacity: 0,
       },
       {
-        id: 'suitability',
-        opacity: 0.7,
+        id: 'BDI_historical_disasters_point',
+        opacity: 0,
       },
       {
-        id: 'aoe',
+        id: 'BDI_migration',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_UCDP_pol',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
         opacity: 1,
       },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
+        opacity: 0,
+      },
     ],
-    layout: [
-      {
-        id: 'labels',
-        visibility: 'none',
-      },
-      {
-        id: 'aoe_labels',
-        visibility: 'visible',
-      },
-      {
-        id: 'evacuation',
-        visibility: 'none',
-      },
-    ],
+    layout: [],
     position: {
-      pitch: 0,
-      bearing: 0,
-      zoom,
+      // center: [121.0974737857415, 14.651397521228759],
+      // zoom: 14.5,
       center,
+      zoom,
+      bearing: 0,
+      pitch: 0,
       duration: 800,
     },
   },
+  lack_of_coping_capacity: {
+    paint: [
+      {
+        id: 'BDI_climate_cdd',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_cdd_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_heat',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_point',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_migration',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_UCDP_pol',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 1,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
+        opacity: 0,
+      },
+    ],
+    layout: [],
+    position: {
+      // center: [121.0974737857415, 14.651397521228759],
+      // zoom: 14.5,
+      center,
+      zoom,
+      bearing: 0,
+      pitch: 0,
+      duration: 800,
+    },
+  },
+  hazard_exposure: {
+    paint: [
+      {
+        id: 'BDI_climate_cdd',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_cdd_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_prcptot_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_rx5_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_climate_txx_proj',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_heat',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_historical_disasters_point',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_migration',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_UCDP_pol',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_conflict_trends',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_vuln',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_lack',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he',
+        opacity: 1,
+      },
+      {
+        id: 'BDI_inform_risk',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_erosion',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_nbs',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_30',
+        opacity: 0,
+      },
+      {
+        id: 'BDI_inform_he_proj_50',
+        opacity: 0,
+      },
+    ],
+    layout: [],
+    position: {
+      // center: [121.0974737857415, 14.651397521228759],
+      // zoom: 14.5,
+      center,
+      zoom,
+      bearing: 0,
+      pitch: 0,
+      duration: 800,
+    },
+  },
+  land_erosion: {
+    paint: [
+        {
+          id: 'BDI_climate_cdd',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_cdd_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_heat',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_point',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_migration',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_UCDP_pol',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_trends',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_vuln',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_lack',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_risk',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_erosion',
+          opacity: 1,
+        },
+        {
+          id: 'BDI_nbs',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he_proj_30',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he_proj_50',
+          opacity: 0,
+        },
+      ],
+      layout: [],
+      position: {
+        // center: [121.0974737857415, 14.651397521228759],
+        // zoom: 14.5,
+        center,
+        zoom,
+        bearing: 0,
+        pitch: 0,
+        duration: 800,
+      },
+    },
+  nbs: {
+    paint: [
+        {
+          id: 'BDI_climate_cdd',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_cdd_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_heat',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_point',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_migration',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_UCDP_pol',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_trends',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_vuln',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_lack',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_risk',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_erosion',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_nbs',
+          opacity: 1,
+        },
+        {
+          id: 'BDI_inform_he_proj_30',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he_proj_50',
+          opacity: 0,
+        },
+      ],
+      layout: [],
+      position: {
+        // center: [121.0974737857415, 14.651397521228759],
+        // zoom: 14.5,
+        center,
+        zoom,
+        bearing: 0,
+        pitch: 0,
+        duration: 800,
+      },
+    },
+  hazard_projections_2030: {
+    paint: [
+        {
+          id: 'BDI_climate_cdd',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_cdd_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_heat',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_point',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_migration',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_UCDP_pol',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_trends',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_vuln',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_lack',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_risk',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_erosion',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_nbs',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he_proj_30',
+          opacity: 1,
+        },
+        {
+          id: 'BDI_inform_he_proj_50',
+          opacity: 0,
+        },
+      ],
+      layout: [],
+      position: {
+        // center: [121.0974737857415, 14.651397521228759],
+        // zoom: 14.5,
+        center,
+        zoom,
+        bearing: 0,
+        pitch: 0,
+        duration: 800,
+      },
+    },
+  hazard_projections_2050: {
+    paint: [
+        {
+          id: 'BDI_climate_cdd',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_cdd_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_prcptot_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_rx5_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_climate_txx_proj',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_heat',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_historical_disasters_point',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_migration',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_UCDP_pol',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_conflict_trends',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_vuln',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_lack',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_risk',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_erosion',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_nbs',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he_proj_30',
+          opacity: 0,
+        },
+        {
+          id: 'BDI_inform_he_proj_50',
+          opacity: 1,
+        },
+      ],
+      layout: [],
+      position: {
+        // center: [121.0974737857415, 14.651397521228759],
+        // zoom: 14.5,
+        center,
+        zoom,
+        bearing: 0,
+        pitch: 0,
+        duration: 800,
+      },
+    },
 };
 
-const legendLabels = {
-  flood: 'Flood Hazard Levels',
-  landelevation3d: 'Land Elevation',
-};
 
 const filters = {
-  land: [
-    {
-      hasAll: true,
-      value: 'buildingType',
-      label: 'Building Type',
-      onChange: 'updateBuildingType',
-      options: [
-        {
-          label: 'Residential',
-          value: 'residential',
-        },
-        {
-          label: 'Private',
-          value: 'private',
-        },
-        {
-          label: 'Health',
-          value: 'health',
-        },
-        {
-          label: 'Education',
-          value: 'education',
-        },
-      ],
-    },
-  ],
-  typhoon: [
-    {
-      hasAll: false,
-      value: 'floodYear',
-      label: 'Flood Hazard Return Period',
-      onChange: 'updateFloodYear',
-      options: [
-        {
-          label: '5-year',
-          value: 'fhm005yrs',
-        },
-        {
-          label: '25-year',
-          value: 'fhm025yrs',
-        },
-        {
-          label: '100-year',
-          value: 'fhm100yrs',
-        },
-      ],
-    },
-  ],
-  evacuation: [
-    {
-      hasAll: true,
-      value: 'amenity',
-      label: 'Evacuation Centers',
-      onChange: 'updateAmenity',
-      options: [
-        {
-          label: 'Community Centre',
-          value: 'community_centre',
-        },
-        {
-          label: 'Basketball Court',
-          value: 'basketball_court',
-        },
-        {
-          label: 'School',
-          value: 'school',
-        },
-      ],
-    },
+  climate_current: [
     {
       hasAll: false,
       value: 'layer',
-      label: 'Toggle Layer',
+      label: 'Layers',
       onChange: 'updateLayer',
       options: [
         {
-          label: 'Land Elevation',
-          value: 'landelevation',
+          label: 'CDD',
+          value: 'BDI_climate_cdd',
+          stops: [
+            [46.2, '#081d58'],
+            [58.4, '#225ea8'],
+            [70.6, '#41b6c4'],
+            [82.8, '#c7e9b4'],
+            [96, '#ffffd9'],
+          ],
         },
         {
-          label: 'Flood Hazard Map',
-          value: 'flood',
-        },
-      ],
-    },
-  ],
-  coverage: [
-    {
-      hasAll: true,
-      value: 'amenity',
-      label: 'Evacuation Centers',
-      onChange: 'updateAmenity',
-      options: [
-        {
-          label: 'Community Centre',
-          value: 'community_centre',
+          label: 'PRCPTOT',
+          value: 'BDI_climate_prcptot',
+          stops: [
+            [750, '#ffffd9'],
+            [1000, '#c7e9b4'],
+            [1250, '#41b6c4'],
+            [1500, '#225ea8'],
+            [2000, '#081d58'],
+          ],
         },
         {
-          label: 'Basketball Court',
-          value: 'basketball_court',
+          label: 'RX5day',
+          value: 'BDI_climate_rx5',
+          stops: [
+            [65, '#ffffd9'],
+            [80, '#c7e9b4'],
+            [95, '#41b6c4'],
+            [110, '#225ea8'],
+            [125, '#081d58'],
+          ],
         },
         {
-          label: 'School',
-          value: 'school',
-        },
-      ],
-    },
-  ],
-  capacity: [
-    {
-      hasAll: true,
-      value: 'amenity',
-      label: 'Evacuation Centers',
-      onChange: 'updateAmenity',
-      options: [
-        {
-          label: 'Community Centre',
-          value: 'community_centre',
-        },
-        {
-          label: 'Basketball Court',
-          value: 'basketball_court',
-        },
-        {
-          label: 'School',
-          value: 'school',
+          label: 'TXx',
+          value: 'BDI_climate_txx',
+          stops: [
+            [32.2, '#dddcdc'],
+            [33.4, '#f3c8b2'],
+            [34.6, '#f6a586'],
+            [35.8, '#e7745b'],
+            [37, '#c83836'],
+          ],
         },
       ],
     },
   ],
-  accessibility: [
+  hotspots: [
     {
-      hasAll: true,
-      value: 'amenity',
-      label: 'Evacuation Centers',
-      onChange: 'updateAmenity',
+      hasAll: false,
+      value: 'layer',
+      label: 'Final inform risk',
+      onChange: 'updateLayer',
       options: [
         {
-          label: 'Community Centre',
-          value: 'community_centre',
+          label: 'INFORM risk',
+          value: 'BDI_inform_risk',
+          stops: [
+            [1.9, '#fec8c0'],
+            [3.4, '#fe9181'],
+            [4.9, '#fe5b42'],
+            [6.4, '#911300'],
+            [10, '#610d00'],
+          ],
         },
         {
-          label: 'Basketball Court',
-          value: 'basketball_court',
+          label: 'Hazard Exposure',
+          value: 'BDI_inform_he',
+          stops: [
+            [1.4, '#fce6d8'],
+            [2.6, '#facdb2'],
+            [4.0, '#f8b48b'],
+            [6.0, '#d9580c'],
+            [10, '#913b08'],
+          ],
         },
         {
-          label: 'School',
-          value: 'school',
+          label: 'Vulnerability',
+          value: 'BDI_inform_vuln',
+          stops: [
+            [1.9, '#ccd9ed'],
+            [3.2, '#99b3dc'],
+            [4.7, '#668ecb'],
+            [6.3, '#20385e'],
+            [10, '#15263f'],
+          ],
+        },
+        {
+          label: 'Lack of Coping Capacity',
+          value: 'BDI_inform_lack',
+          stops: [
+            [3.1, '#e1e9d7'],
+            [4.6, '#c4d3b0'],
+            [5.9, '#a7bd89'],
+            [7.3, '#4f6236'],
+            [10, '#354124'],
+          ],
+        },
+      ],
+    }
+  ],
+  climate_projections: [
+    {
+      hasAll: false,
+      value: 'layer',
+      label: 'Layers',
+      onChange: 'updateLayer',
+      options: [
+        {
+          label: 'CDD change RCP45',
+          value: 'BDI_climate_cdd_proj',
+          stops: [
+            [-20, '#01564d'],
+            [-15, '#2f9189'],
+            [-10, '#8ad1c6'],
+            [-5, '#d9eeeb'],
+            [0, '#f6edd5'],
+            [5, '#e1c684'],
+            [10, '#b77928'],
+            [15, '#754308'],
+            [20, '#543005'],
+          ],
+        },
+        {
+          label: 'PRCPTOT change RCP45',
+          value: 'BDI_climate_prcptot_proj',
+          stops: [
+            [-20, '#774508'],
+            [-15, '#b97b29'],
+            [-10, '#e2c787'],
+            [-5, '#f6edd7'],
+            [0, '#d7eeeb'],
+            [5, '#87d0c5'],
+            [10, '#2d8f87'],
+            [15, '#01564d'],
+          ],
+        },
+        {
+          label: 'RX5day change RCP45',
+          value: 'BDI_climate_rx5_proj',
+          stops: [
+            [-20, '#774508'],
+            [-15, '#b97b29'],
+            [-10, '#e2c787'],
+            [-5, '#f6edd7'],
+            [0, '#d7eeeb'],
+            [5, '#87d0c5'],
+            [10, '#2d8f87'],
+            [15, '#01564d'],
+          ],
+        },
+        {
+          label: 'TXx change RCP45',
+          value: 'BDI_climate_txx_proj',
+          stops: [
+            [0.5, '#fff0dc'],
+            [1, '#fee2bb'],
+            [1.5, '#fdce98'],
+            [2, '#fdb67f'],
+            [2.5, '#fc8c59'],
+            [3, '#f0694a'],
+            [3.5, '#dc3c28'],
+            [4, '#be0f0a'],
+            [4.5, '#960000'],
+            [5, '#7f0000'],
+          ],
         },
       ],
     },
     {
       hasAll: false,
-      value: 'minutes',
-      label: 'Minutes to Walk',
-      onChange: 'updateMinutes',
+      value: 'climateYear',
+      label: 'Timespan',
+      onChange: 'updateClimateYear',
       options: [
         {
-          label: '5',
-          value: 5,
+          label: '2020-2040 w.r.t 1981-2000',
+          value: 'change_2030_mean',
         },
         {
-          label: '10',
-          value: 10,
-        },
-        {
-          label: '15',
-          value: 15,
-        },
-        {
-          label: '20',
-          value: 20,
-        },
-        {
-          label: '25',
-          value: 25,
-        },
-        {
-          label: '30',
-          value: 30,
+          label: '2030-2050 w.r.t 1981-2000',
+          value: 'change_2050_mean',
         },
       ],
     },
   ],
-  suitability: [
+  disasters: [
     {
       hasAll: true,
-      value: 'amenity',
-      label: 'Evacuation Centers',
-      onChange: 'updateAmenity',
+      value: 'disasterType',
+      label: 'Hazard Type',
+      onChange: 'updateDisasterType',
       options: [
         {
-          label: 'Community Centre',
-          value: 'community_centre',
+          label: 'Drought',
+          value: 'Drought',
         },
         {
-          label: 'Basketball Court',
-          value: 'basketball_court',
+          label: 'Heavy rainfall',
+          value: 'Heavy rainfall',
         },
         {
-          label: 'School',
-          value: 'school',
-        },
-      ],
-    },
-    {
-      hasAll: false,
-      value: 'suitabilityYear',
-      label: 'Suitability Return Period',
-      onChange: 'updateSuitabilityYear',
-      options: [
-        {
-          label: '5-year',
-          value: 'mcda005yrs',
+          label: 'Epidemic',
+          value: 'Epidemic',
         },
         {
-          label: '25-year',
-          value: 'mcda025yrs',
+          label: 'Wildfire',
+          value: 'Wildfire',
         },
         {
-          label: '100-year',
-          value: 'mcda100yrs',
+          label: 'Violent wind',
+          value: 'Violent wind',
         },
       ],
     },
   ],
-  'good-place': [
+  conflict: [
     {
       hasAll: false,
-      value: 'suitabilityYear',
-      label: 'Suitability Return Period',
-      onChange: 'updateSuitabilityYear',
+      value: 'layer',
+      label: 'Conflict hotspots',
+      onChange: 'updateLayer',
       options: [
         {
-          label: '5-year',
-          value: 'mcda005yrs',
+          label: 'Past (1989 - 2020)',
+          value: 'BDI_conflict_UCDP_pol',
         },
         {
-          label: '25-year',
-          value: 'mcda025yrs',
-        },
-        {
-          label: '100-year',
-          value: 'mcda100yrs',
+          label: 'Future trends',
+          value: 'BDI_conflict_trends',
         },
       ],
     },
   ],
-  conclusion: [
+  vulnerability: [
     {
       hasAll: false,
-      value: 'suitabilityYear',
-      label: 'Suitability Return Period',
-      onChange: 'updateSuitabilityYear',
+      value: 'layerVuln',
+      label: 'Vulnerability indicators',
+      onChange: 'updateLayerVuln',
       options: [
         {
-          label: '5-year',
-          value: 'mcda005yrs',
+          label: 'Composite vulnerability score',
+          value: 'VULNERABILITY',
         },
         {
-          label: '25-year',
-          value: 'mcda025yrs',
+          label: 'Multidimensional Poverty Index',
+          value: 'Multidimensional Poverty Index INDEX',
         },
         {
-          label: '100-year',
-          value: 'mcda100yrs',
+          label: 'Malaria Mortality rate',
+          value: 'Malaria Mortality rate INDEX',
+        },
+        {
+          label: 'Food insecurity',
+          value: 'Food insecurity (categories) INDEX',
+        },
+        {
+          label: 'People in need',
+          value: 'People in need FINAL INDEX',
+        },
+        {
+          label: 'Elderly over 60',
+          value: 'Elderly over 60 FINAL INDEX',
+        },
+        {
+          label: 'Children under 5',
+          value: 'Children under 5 FINAL INDEX',
+        },
+        {
+          label: 'Pregnant women ',
+          value: 'Pregnant women FINAL INDEX',
+        },
+        {
+          label: 'IDPs',
+          value: 'IDPs FINAL INDEX',
         },
       ],
     },
+  ],
+  lack_of_coping_capacity: [
+    {
+      hasAll: false,
+      value: 'layerLOCC',
+      label: 'Lack of coping capacity indicators',
+      onChange: 'updateLayerLOCC',
+      options: [
+        {
+          label: 'Lack of coping capacity score',
+          value: 'LACK OF COPING CAPACITY',
+        },
+        {
+          label: 'Access to healthcare',
+          value: 'Access to healthcare INDEX FINAL',
+        },
+        {
+          label: 'Access to education',
+          value: 'Access to education INDEX FINAL',
+        },
+        {
+          label: 'Access to electricity',
+          value: 'Access to electricity Relative INDEX',
+        },
+        {
+          label: 'Access to cities',
+          value: 'Access to cities INDEX',
+        },
+      ]
+    }
+  ],
+  hazard_exposure: [
+    {
+      hasAll: false,
+      value: 'layerHe',
+      label: 'Hazard exposure indicators',
+      onChange: 'updateLayerHe',
+      options: [
+        {
+          label: 'Hazard exposure score',
+          value: 'HAZARD & EXPOSURE',
+        },
+        {
+          label: 'Flood exposure',
+          value: 'Flood exposure FINAL INDEX',
+        },
+        {
+          label: 'Drought exposure',
+          value: 'Drought exposure FINAL INDEX',
+        },
+        {
+          label: 'Landslide exposure',
+          value: 'Landslide exposure  FINAL INDEX',
+        },
+        {
+          label: 'Conflict trends',
+          value: 'Conflict FINAL INDEX',
+        },
+      ],
+    }
+  ],
+  hazard_projections_2030: [
+    {
+      hasAll: false,
+      value: 'layerHe30',
+      label: 'Hazards',
+      onChange: 'updateLayerHe30',
+      options: [
+        {
+          label: 'Hazard exposure 2030',
+          value: 'proj_hazard_2030',
+        },
+        {
+          label: 'Flood exposure 2030',
+          value: 'proj_flood_2030',
+        },
+        {
+          label: 'Drought exposure 2030',
+          value: 'proj_drought_2030',
+        },
+        {
+          label: 'Landslide exposure',
+          value: 'proj_landslide_2030',
+        },
+      ],
+    }
+  ],
+  hazard_projections_2050: [
+    {
+      hasAll: false,
+      value: 'layerHe50',
+      label: 'Hazards',
+      onChange: 'updateLayerHe50',
+      options: [
+        {
+          label: 'Hazard exposure 2050',
+          value: 'proj_hazard_2050',
+        },
+        {
+          label: 'Flood exposure 2050',
+          value: 'proj_flood_2050',
+        },
+        {
+          label: 'Drought exposure 2050',
+          value: 'proj_drought_2050',
+        },
+        {
+          label: 'Landslide exposure',
+          value: 'proj_landslide_2050',
+        },
+      ],
+    }
   ],
 };
+
 
 const tooltipConfig = {
-  marikina: {
-    layer: 'landelevation3d',
+    BDI_climate_cdd: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Current climatology',
+            value: 'obs_mean',
+          },
+        ],
+      },
+    BDI_climate_prcptot: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Current climatology',
+            value: 'obs_mean',
+          },
+        ],
+      },
+    BDI_climate_rx5: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Current climatology',
+            value: 'obs_mean',
+          },
+        ],
+      },
+    BDI_climate_txx: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Current climatology',
+            value: 'obs_mean',
+          },
+        ],
+      },
+    BDI_historical_disasters_point: {
     features: [
       {
-        label: 'meters above sea level',
-        value: 'value',
-        type: 'inline',
-      },
-    ],
-  },
-  land: {
-    layer: 'buildings',
-    features: [
-      {
-        label: 'Building Type',
-        value: 'category',
-      },
-    ],
-  },
-  typhoon: {
-    layer: 'buildings',
-    features: [
-      {
-        label: 'Building Type',
-        value: 'category',
-      },
-    ],
-  },
-  evacuation: {
-    layer: 'evacuation',
-    features: [
-      {
-        label: 'Name',
-        value: 'name',
-        type: 'title',
+        label: 'Main hazard: ',
+        value: 'main_hazard',
       },
       {
-        label: 'Capacity',
-        value: 'capacity',
-      },
-    ],
-  },
-  coverage: {
-    layer: 'evacuation',
-    features: [
-      {
-        label: 'Name',
-        value: 'name',
-        type: 'title',
+        label: 'Cascading/compounding disasters: ',
+        value: 'second_disaster',
       },
       {
-        label: 'Population Coverage (400-m)',
-        value: 'pop_coverage',
+        label: 'Date: ',
+        value: 'Date',
       },
-    ],
-  },
-  capacity: {
-    layer: 'evacuation',
-    features: [
-      {
-        label: 'Name',
-        value: 'name',
-        type: 'title',
+      ],
+    },
+    BDI_climate_cdd_proj: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Projections RCP45 for 2030',
+            value: 'change_2030_mean',
+          },
+          {
+            label: 'Projections RCP45 for 2050',
+            value: 'change_2050_mean',
+          },
+        ],
       },
-      {
-        label: 'Population Coverage (400-m)',
-        value: 'pop_coverage',
+    BDI_climate_prcptot_proj: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Projections RCP45 for 2030',
+            value: 'change_2030_mean',
+          },
+          {
+            label: 'Projections RCP45 for 2050',
+            value: 'change_2050_mean',
+          },
+        ],
       },
-      {
-        label: 'Capacity',
-        value: 'capacity',
+    BDI_climate_rx5_proj: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Projections RCP45 for 2030',
+            value: 'change_2030_mean',
+          },
+          {
+            label: 'Projections RCP45 for 2050',
+            value: 'change_2050_mean',
+          },
+        ],
       },
-    ],
-  },
-  accessibility: {
-    layer: 'evacuation',
-    features: [
-      {
-        label: 'Name',
-        value: 'name',
+    BDI_climate_txx_proj: {
+        features: [
+          {
+            label: 'Name',
+            value: 'NAME_ADM3',
+            type: 'title',
+          },
+          {
+            label: 'Projections RCP45 for 2030',
+            value: 'change_2030_mean',
+          },
+          {
+            label: 'Projections RCP45 for 2050',
+            value: 'change_2050_mean',
+          },
+        ],
       },
-      {
-        label: 'Capacity',
-        value: 'capacity',
-      },
-    ],
-  },
-};
+    BDI_migration: {
+      features: [
+        {
+          label: 'IDPs',
+          value: 'individus_int',
+          type: 'inline',
+        },
+      ],
+    },
+    BDI_conflict_UCDP_pol: {
+      features: [
+        {
+          label: 'NAME',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'fatalities',
+          value: 'fat',
+          type: 'inline'
+        },
+      ],
+    },
+    BDI_conflict_trends: {
+      features: [
+        {
+          label: ' ',
+          value: 'Con_type',
+          type: 'inline',
+        },
+      ],
+    },
+    BDI_inform_vuln: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'Vulnerability index',
+          value: 'VULNERABILITY',
+        },
+        {
+          label: 'Multidimensional Poverty Index',
+          value: 'Multidimensional Poverty Index INDEX',
+        },
+        {
+          label: 'Malaria Mortality rate',
+          value: 'Malaria Mortality rate INDEX',
+        },
+        {
+          label: 'Food insecurity (categories) INDEX',
+          value: 'Food insecurity (categories) INDEX',
+        },
+        {
+          label: 'People in need FINAL INDEX',
+          value: 'People in need FINAL INDEX',
+        },
+        {
+          label: 'Elderly over 60 FINAL INDEX',
+          value: 'Elderly over 60 FINAL INDEX',
+        },
+        {
+          label: 'Children under 5 FINAL INDEX',
+          value: 'Children under 5 FINAL INDEX',
+        },
+        {
+          label: 'Pregnant women FINAL INDEX',
+          value: 'Pregnant women FINAL INDEX',
+        },
+        {
+          label: 'IDPs FINAL INDEX',
+          value: 'IDPs FINAL INDEX',
+        },
+      ],
+    },
+    BDI_inform_lack: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'Lack of coping capacity score',
+          value: 'LACK OF COPING CAPACITY',
+        },
+        {
+          label: 'Access to healthcare',
+          value: 'Access to healthcare INDEX FINAL',
+        },
+        {
+          label: 'Access to education',
+          value: 'Access to education INDEX FINAL',
+        },
+        {
+          label: 'Access to electricity',
+          value: 'Access to electricity Relative INDEX',
+        },
+        {
+          label: 'Access to cities',
+          value: 'Access to cities INDEX',
+        },
+      ],
+    },
+    BDI_inform_he: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'Hazard exposure score',
+          value: 'HAZARD & EXPOSURE',
+        },
+        {
+          label: 'Flood exposure',
+          value: 'Flood exposure FINAL INDEX',
+        },
+        {
+          label: 'Drought exposure',
+          value: 'Drought exposure FINAL INDEX',
+        },
+        {
+          label: 'Landslide exposure',
+          value: 'Landslide exposure  FINAL INDEX',
+        },
+        {
+          label: 'Conflict trends',
+          value: 'Conflict FINAL INDEX',
+        },
+      ],
+    },
+    BDI_inform_risk: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'INFORM index',
+          value: 'INFORM RISK INDEX SCORE',
+        },
+        {
+          label: 'Hazard exposure',
+          value: 'HAZARD & EXPOSURE',
+        },
+        {
+          label: 'Lack of coping capacity',
+          value: 'LACK OF COPING CAPACITY',
+        },
+        {
+          label: 'Vulnerability',
+          value: 'VULNERABILITY',
+        },
+      ],
+    },
+    BDI_erosion: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'Erosion rate, tons/ha/year',
+          value: 'Average erosion rate by colline, tons/ha/year',
+        },
+      ],
+    },
+    BDI_nbs: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'NBS Potential Index',
+          value: 'NBS Potential Index',
+        },
+      ],
+    },
+    BDI_inform_he_proj_30: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'Hazard exposure 2030',
+          value: 'proj_hazard_2030',
+        },
+        {
+          label: 'Flood exposure 2030',
+          value: 'proj_flood_2030',
+        },
+        {
+          label: 'Drought exposure 2030',
+          value: 'proj_drought_2030',
+        },
+        {
+          label: 'Landslide exposure 2030',
+          value: 'proj_landslide_2030',
+        },
+      ],
+    },
+    BDI_inform_he_proj_50: {
+      features: [
+        {
+          label: 'Name',
+          value: 'NAME_ADM3',
+          type: 'title',
+        },
+        {
+          label: 'Hazard exposure 2050',
+          value: 'proj_hazard_2050',
+        },
+        {
+          label: 'Flood exposure 2050',
+          value: 'proj_flood_2050',
+        },
+        {
+          label: 'Drought exposure 2050',
+          value: 'proj_drought_2050',
+        },
+        {
+          label: 'Landslide exposure 2050',
+          value: 'proj_landslide_2050',
+        },
+      ],
+    },
+  };
+
+const tooltipLayers = {
+  climate_current: ['BDI_climate_cdd', 'BDI_climate_prcptot', 'BDI_climate_rx5', 'BDI_climate_txx'],
+  climate_projections: ['BDI_climate_cdd_proj', 'BDI_climate_prcptot_proj', 'BDI_climate_rx5_proj', 'BDI_climate_txx_proj'],
+  disasters: ['BDI_historical_disasters_point'],
+  migration: ['BDI_migration'],
+  conflict: ['BDI_conflict_UCDP_pol', 'BDI_conflict_trends'],
+  vulnerability: ['BDI_inform_vuln'],
+  lack_of_coping_capacity: ['BDI_inform_lack'],
+  hazard_exposure: ['BDI_inform_he'],
+  hotspots: ['BDI_inform_risk'],
+  land_erosion: ['BDI_erosion'],
+  nbs: ['BDI_nbs'],
+  hazard_projections_2030: ['BDI_inform_he_proj_30'],
+  hazard_projections_2050: ['BDI_inform_he_proj_50'],
+  };
 
 const legendOptions = {
-  landelevation3d: {
-    name: 'Land Elevation (m)',
-    colors: ['#ffffcc', '#c7e9b4', '#7fcdbb', '#41b6c4', '#1d91c0'],
-    min: 2,
-    max: 70,
+  BDI_climate_cdd: {
+    name: 'MAXIMUM NUMBER OF CONSECUTIVE DRY DAYS WITH RR<1 MM (days)',
+    colors: ['#081d58','#225ea8','#41b6c4','#c7e9b4','#ffffd9'],
+    min: 35,
+    max: 95,
     range: true,
   },
-  landelevation: {
-    name: 'Land Elevation (m)',
-    colors: ['#ffffcc', '#c7e9b4', '#7fcdbb', '#41b6c4', '#1d91c0'],
-    min: 2,
-    max: 70,
+  BDI_climate_prcptot: {
+    name: 'MEAN ANNUAL TOTAL PRECIPITATION (mm)',
+    colors: ['#ffffd9','#c7e9b4','#41b6c4','#225ea8','#081d58'],
+    min: 820,
+    max: 1240,
     range: true,
   },
-  flood: {
-    name: 'Flood Hazard',
+  BDI_climate_rx5: {
+    name: 'MAXIMUM 5-DAY PRECIPITATION TOTAL (mm)',
+    colors: ['#ffffd9','#c7e9b4','#41b6c4','#225ea8','#081d58'],
+    min: 50,
+    max: 125,
+    range: true,
+  },
+  BDI_climate_txx: {
+    name: 'MAXIMUM OF MAXIMUM TEMPERATURE (°C)',
+    colors: ['#dddcdc','#f3c8b2','#f6a586','#e7745b','#c83836'],
+    min: 30,
+    max: 37,
+    range: true,
+  },
+  BDI_climate_cdd_proj: {
+    name: 'MAXIMUM NUMBER OF CONSECUTIVE DRY DAYS CHANGE (%)',
+    colors: ['#01564d','#2f9189','#8ad1c6','#d9eeeb','#f6edd5','#e1c684','#b77928','#754308','#543005'],
+    min: -20,
+    max: 20,
+    range: true,
+  },
+  BDI_climate_prcptot_proj: {
+    name: 'MEAN ANNUAL TOTAL PRECIPITATION CHANGE (%)',
+    colors: ['#774508','#b97b29','#e2c787','#f6edd7','#d7eeeb','#87d0c5','#2d8f87','#01564d'],
+    min: -20,
+    max: 20,
+    range: true,
+  },
+  BDI_climate_rx5_proj: {
+    name: 'MAXIMUM 5-DAY PRECIPITATION TOTAL CHANGE (%)',
+    colors: ['#774508','#b97b29','#e2c787','#f6edd7','#d7eeeb','#87d0c5','#2d8f87','#01564d'],
+    min: -20,
+    max: 20,
+    range: true,
+  },
+  BDI_climate_txx_proj: {
+    name: 'MAXIMUM OF MAXIMUM TEMPERATURE (°C) CHANGE (%)',
+    colors: ['#fff0dc','#fee2bb','#fdce98','#fdb67f','#fc8c59','#f0694a','#dc3c28','#be0f0a','#960000','#7f0000'],
+    min: 0,
+    max: 5,
+    range: true,
+  },
+  BDI_historical_disasters: {
+    name: 'Hazard type',
     colors: [
       {
-        label: 'Marginal',
-        color: '#ffffb2',
+        label: 'Drought',
+        color: '#fbb03b',
+      },
+      {
+        label: 'Heavy rainfall',
+        color: '#223b53',
+      },
+      {
+        label: 'Epidemic',
+        color: '#e55e5e',
+      },
+      {
+        label: 'Wildfire',
+        color: '#168C04',
+      },
+      {
+        label: 'Violent wind',
+        color: '#3bb2d0',
+      },
+    ],
+    range: false,
+  },
+  BDI_migration: {
+    name: 'Number of IDPs',
+    colors: ['#f3ffff','#d6fff3','#baefd6','#84b7a0','#51826c'],
+    min: '< 10',
+    max: '1000 +',
+    range: true,
+  },
+  BDI_conflict_UCDP_pol: {
+    name: 'Number of fatalities',
+    colors: ['#feebe2','#fbb4b9'],
+    min: '< 1',
+    max: '100+',
+    range: true,
+  },
+  BDI_conflict_trends: {
+    name: 'Type of conflict',
+    colors: [
+      {
+        label: 'Violence against civilians',
+        color: '#5e91b2',
+      },
+      {
+        label: 'Riots',
+        color: '#ca7934',
+      },
+      {
+        label: 'Battles',
+        color: '#ffd945',
+      },
+      {
+        label: 'Other',
+        color: '#6e8a64',
+      },
+    ],
+    range: false,
+  },
+  BDI_inform_vuln: {
+    name: 'Vulnerability Index',
+    colors: [
+      {
+        label: 'Very low',
+        color: '#ccd9ed',
       },
       {
         label: 'Low',
-        color: '#fecc5c',
+        color: '#99b3dc',
       },
       {
         label: 'Medium',
-        color: '#fd8d3c',
+        color: '#668ecb',
       },
       {
         label: 'High',
-        color: '#e31a1c',
+        color: '#20385e',
+      },
+      {
+        label: 'Very high',
+        color: '#15263f',
       },
     ],
-    range: false,
+    range: false
   },
-  population: {
-    name: 'Population (per pixel) (40 sqm)',
-    colors: ['#feebe2', '#fbb4b9', '#f768a1', '#c51b8a', '#7a0177'],
-    min: 13,
-    max: 24,
-    range: true,
-  },
-  radius: {
-    name: 'Population Coverage',
-    colors: ['#feebe2', '#fbb4b9', '#f768a1', '#c51b8a', '#7a0177'],
-    min: '5,700',
-    max: '13,900',
-    range: true,
-  },
-  capacity: {
-    name: 'Estimated Capacity',
-    colors: ['#feebe2', '#fbb4b9', '#f768a1', '#c51b8a', '#7a0177'],
-    min: '120',
-    max: '2,750',
-    range: true,
-  },
-  suitability: {
-    name: 'Suitability',
+  BDI_inform_lack: {
+    name: 'Lack of coping capacity',
     colors: [
       {
-        label: 'Unsafe',
-        color: '#000000',
-      },
-      {
-        label: 'Very Low',
-        color: '#b2182b',
+        label: 'Very low',
+        color: '#e1e9d7',
       },
       {
         label: 'Low',
-        color: '#ef8a62',
+        color: '#c4d3b0',
+      },
+      {
+        label: 'Medium',
+        color: '#a7bd89',
       },
       {
         label: 'High',
-        color: '#67a9cf',
+        color: '#4f6236',
       },
       {
-        label: 'Very High',
-        color: '#2166ac',
+        label: 'Very high',
+        color: '#354124',
       },
     ],
-    range: false,
+    range: false
+  },
+  BDI_inform_he: {
+    name: 'Hazard exposure',
+    colors: [
+      {
+        label: 'Very low',
+        color: '#fce6d8',
+      },
+      {
+        label: 'Low',
+        color: '#facdb2',
+      },
+      {
+        label: 'Medium',
+        color: '#f8b48b',
+      },
+      {
+        label: 'High',
+        color: '#d9580c',
+      },
+      {
+        label: 'Very high',
+        color: '#913b08',
+      },
+    ],
+    range: false
+  },
+  BDI_inform_risk: {
+    name: 'Inform risk',
+    colors: [
+      {
+        label: 'Very low',
+        color: '#fec8c0',
+      },
+      {
+        label: 'Low',
+        color: '#fe9181',
+      },
+      {
+        label: 'Medium',
+        color: '#fe5b42',
+      },
+      {
+        label: 'High',
+        color: '#911300',
+      },
+      {
+        label: 'Very high',
+        color: '#610d00',
+      },
+    ],
+    range: false
+  },
+  BDI_erosion: {
+    name: 'Mean erosion rate (tons/ha/year)',
+    colors: ['#404040', '#767676', '#acacac', '#d1d2d1', '#f0f0f0', '#f9eae4', '#f2c0b1', '#e58f80', '#dc4650', '#c60b27'],
+    min: 13,
+    max: 7770,
+    range: true,
+  },
+  BDI_nbs: {
+    name: 'NBS potential index',
+    colors: ['#a5601c', '#b98e59', '#d5b47a', '#e4cda7', '#f2e9d8', '#dce9e8', '#acd5d1', '#7cbdb3', '#469b8c', '#0f7c69'],
+    min: 0,
+    max: 1,
+    range: true,
+  },
+  BDI_inform_he_proj_30: {
+    name: 'Hazard exposure 2030',
+    colors: [
+      {
+        label: 'Very low',
+        color: '#fce6d8',
+      },
+      {
+        label: 'Low',
+        color: '#facdb2',
+      },
+      {
+        label: 'Medium',
+        color: '#f8b48b',
+      },
+      {
+        label: 'High',
+        color: '#d9580c',
+      },
+      {
+        label: 'Very high',
+        color: '#913b08',
+      },
+    ],
+    range: false
+  },
+  BDI_inform_he_proj_50: {
+    name: 'Hazard exposure 2050',
+    colors: [
+      {
+        label: 'Very low',
+        color: '#fce6d8',
+      },
+      {
+        label: 'Low',
+        color: '#facdb2',
+      },
+      {
+        label: 'Medium',
+        color: '#f8b48b',
+      },
+      {
+        label: 'High',
+        color: '#d9580c',
+      },
+      {
+        label: 'Very high',
+        color: '#913b08',
+      },
+    ],
+    range: false
   },
 };
 
 const chapterLayers = {
-  marikina: ['landelevation3d'],
-  land: ['landelevation'],
-  typhoon: ['flood'],
-  evacuation: ['flood', 'landelevation'],
-  population: ['population'],
-  coverage: ['radius'],
-  capacity: ['capacity'],
-  suitability: ['suitability'],
-  'good-place': ['suitability'],
-  conclusion: ['suitability'],
+  climate_current: ['BDI_climate_cdd', 'BDI_climate_prcptot', 'BDI_climate_rx5', 'BDI_climate_txx'],
+  hotspots: ['BDI_inform_risk', 'BDI_inform_he', 'BDI_inform_vuln', 'BDI_inform_lack'],
+  climate_projections: ['BDI_climate_cdd_proj', 'BDI_climate_prcptot_proj', 'BDI_climate_rx5_proj', 'BDI_climate_txx_proj'],
+  disasters: ['BDI_historical_disasters'],
+  migration: ['BDI_migration'],
+  conflict: ['BDI_conflict_UCDP_pol', 'BDI_conflict_trends'],
+  vulnerability: ['BDI_inform_vuln'],
+  lack_of_coping_capacity: ['BDI_inform_lack'],
+  hazard_exposure: ['BDI_inform_he'],
+  land_erosion: ['BDI_erosion'],
+  nbs: ['BDI_nbs'],
+  hazard_projections_2030: ['BDI_inform_he_proj_30'],
+  hazard_projections_2050: ['BDI_inform_he_proj_50'],
+
 };
 
-const floodStops = [
-  [1, '#e31a1c'],
-  [2, '#fd8d3c'],
-  [3, '#fecc5c'],
-  [4, '#ffffb2'],
+const vulnerabilityStops = [
+  [1.9, '#ccd9ed'],
+  [3.2, '#99b3dc'],
+  [4.7, '#668ecb'],
+  [6.3, '#20385e'],
+  [10, '#15263f'],
 ];
-
-const suitabilityStops = [
-  [1, '#000000'],
-  [2, '#b2182b'],
-  [3, '#ef8a62'],
-  [4, '#67a9cf'],
-  [5, '#2166ac'],
+const loccStops = [
+  [3.1, '#e1e9d7'],
+  [4.6, '#c4d3b0'],
+  [5.9, '#a7bd89'],
+  [7.3, '#4f6236'],
+  [10, '#354124'],
 ];
+const heStops = [
+  [1.4, '#fce6d8'],
+  [2.6, '#facdb2'],
+  [4.0, '#f8b48b'],
+  [6.0, '#d9580c'],
+  [10, '#913b08'],
 
-const isoStops = [
-  [30, '#bd0026'],
-  [25, '#f03b20'],
-  [20, '#fd8d3c'],
-  [15, '#feb24c'],
-  [10, '#feb24c'],
-  [5, '#feb24c'],
+];
+const riskStops = [
+  [1.9, '#fec8c0'],
+  [3.4, '#fe9181'],
+  [4.9, '#fe5b42'],
+  [6.4, '#911300'],
+  [10, '#610d00'],
 ];
 
 export {
-  chapters, legendLabels, filters, legendOptions, chapterLayers, floodStops,
-  suitabilityStops, tooltipConfig, isoStops,
+  chapters, filters, legendOptions, chapterLayers, tooltipConfig, tooltipLayers, vulnerabilityStops, loccStops, heStops, riskStops
 };
